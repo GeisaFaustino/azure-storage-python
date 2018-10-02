@@ -554,3 +554,8 @@ def _convert_xml_to_user_delegation_key(response):
     delegation_key.value = key_element.findtext('Value')
 
     return delegation_key
+
+
+def _parse_continuation_token(response):
+    marker = response.headers.get('x-ms-continuation')
+    return marker if marker is not '' else None
