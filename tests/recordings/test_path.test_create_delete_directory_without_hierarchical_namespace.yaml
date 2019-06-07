@@ -1,0 +1,499 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5cbf9fe2-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:08 GMT']
+      x-ms-properties: ['foo=YmFy,mama=bWlh']
+      x-ms-version: ['2018-11-09']
+    method: PUT
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?resource=directory
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:08 GMT']
+      ETag: ['"0x8D6EB20412E0CA4"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:08 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785ba9-201f-0054-4f09-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5d964592-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      x-ms-version: ['2018-11-09']
+    method: PUT
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?resource=directory
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      ETag: ['"0x8D6EB2041CE925D"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785baa-201f-0054-5009-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5d9d6df4-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      x-ms-version: ['2018-11-09']
+    method: DELETE
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?recursive=True
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785bab-201f-0054-5109-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5da4b172-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      x-ms-version: ['2018-11-09']
+    method: DELETE
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?recursive=True
+  response:
+    body: {string: '{"error":{"code":"PathNotFound","message":"The specified path
+        does not exist.\nRequestId:ca785bac-201f-0054-5209-1d25a1000000\nTime:2019-06-07T08:15:09.6398978Z"}}'}
+    headers:
+      Content-Length: ['163']
+      Content-Type: [application/json;charset=utf-8]
+      Date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-error-code: [PathNotFound]
+      x-ms-request-id: [ca785bac-201f-0054-5209-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 404, message: The specified path does not exist.}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5db1db18-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      x-ms-version: ['2018-11-09']
+    method: DELETE
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?recursive=True
+  response:
+    body: {string: '{"error":{"code":"PathNotFound","message":"The specified path
+        does not exist.\nRequestId:ca785bad-201f-0054-5309-1d25a1000000\nTime:2019-06-07T08:15:09.7930440Z"}}'}
+    headers:
+      Content-Length: ['163']
+      Content-Type: [application/json;charset=utf-8]
+      Date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-error-code: [PathNotFound]
+      x-ms-request-id: [ca785bad-201f-0054-5309-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 404, message: The specified path does not exist.}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5dc944b0-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      x-ms-permissions: [rwxrw-rw-]
+      x-ms-umask: ['0022']
+      x-ms-version: ['2018-11-09']
+    method: PUT
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?resource=directory
+  response:
+    body: {string: '{"error":{"code":"UnsupportedHeader","message":"One of the headers
+        specified in the request is not supported.\nRequestId:ca785bae-201f-0054-5409-1d25a1000000\nTime:2019-06-07T08:15:09.8380875Z"}}'}
+    headers:
+      Content-Length: ['195']
+      Content-Type: [application/json;charset=utf-8]
+      Date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-error-code: [UnsupportedHeader]
+      x-ms-request-id: [ca785bae-201f-0054-5409-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 400, message: One of the headers specified in the request is not
+        supported.}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5dcffc42-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      x-ms-version: ['2018-11-09']
+    method: PUT
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?resource=directory
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      ETag: ['"0x8D6EB204207FFC4"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785baf-201f-0054-5509-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5dd6c680-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      x-ms-version: ['2018-11-09']
+    method: PUT
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51/directorytestded41c51?resource=directory
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      ETag: ['"0x8D6EB20420FF0F0"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785bb0-201f-0054-5609-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5ddeb412-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      x-ms-version: ['2018-11-09']
+    method: DELETE
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?recursive=False
+  response:
+    body: {string: '{"error":{"code":"DirectoryNotEmpty","message":"The recursive
+        query parameter value must be true to delete a non-empty directory.\nRequestId:ca785bb1-201f-0054-5709-1d25a1000000\nTime:2019-06-07T08:15:09.9832265Z"}}'}
+    headers:
+      Content-Length: ['215']
+      Content-Type: [application/json;charset=utf-8]
+      Date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-error-code: [DirectoryNotEmpty]
+      x-ms-request-id: [ca785bb1-201f-0054-5709-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 409, message: The recursive query parameter value must be true
+        to delete a non-empty directory.}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5de9c9ce-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      x-ms-version: ['2018-11-09']
+    method: DELETE
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?recursive=True
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785bb2-201f-0054-5809-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5df190e6-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      x-ms-version: ['2018-11-09']
+    method: PUT
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?resource=directory
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      ETag: ['"0x8D6EB20422A0F02"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785bb3-201f-0054-5909-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      If-Match: ['0x111111111111111']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5df8e38c-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      x-ms-version: ['2018-11-09']
+    method: DELETE
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?recursive=True
+  response:
+    body: {string: '{"error":{"code":"ConditionNotMet","message":"The condition specified
+        using HTTP conditional header(s) is not met.\nRequestId:ca785bb4-201f-0054-5a09-1d25a1000000\nTime:2019-06-07T08:15:10.1453817Z"}}'}
+    headers:
+      Content-Length: ['200']
+      Content-Type: [application/json;charset=utf-8]
+      Date: ['Fri, 07 Jun 2019 08:15:09 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-error-code: [ConditionNotMet]
+      x-ms-request-id: [ca785bb4-201f-0054-5a09-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 412, message: The condition specified using HTTP conditional header(s)
+        is not met.}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      If-Match: ['"0x8D6EB20422A0F02"']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5dfecd4c-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      x-ms-version: ['2018-11-09']
+    method: DELETE
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?recursive=True
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785bb5-201f-0054-5b09-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5e06a788-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      x-ms-version: ['2018-11-09']
+    method: PUT
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?resource=directory
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      ETag: ['"0x8D6EB20423ED493"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785bb6-201f-0054-5c09-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      If-None-Match: ['"0x8D6EB20423ED493"']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5e0d6ae6-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      x-ms-version: ['2018-11-09']
+    method: DELETE
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?recursive=True
+  response:
+    body: {string: '{"error":{"code":"ConditionNotMet","message":"The condition specified
+        using HTTP conditional header(s) is not met.\nRequestId:ca785bb7-201f-0054-5d09-1d25a1000000\nTime:2019-06-07T08:15:10.2865164Z"}}'}
+    headers:
+      Content-Length: ['200']
+      Content-Type: [application/json;charset=utf-8]
+      Date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-error-code: [ConditionNotMet]
+      x-ms-request-id: [ca785bb7-201f-0054-5d09-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 412, message: The condition specified using HTTP conditional header(s)
+        is not met.}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      If-None-Match: ['0x111111111111111']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5e14784a-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      x-ms-version: ['2018-11-09']
+    method: DELETE
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?recursive=True
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785bb8-201f-0054-5e09-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5e1b7b2c-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      x-ms-version: ['2018-11-09']
+    method: PUT
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?resource=directory
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      ETag: ['"0x8D6EB2042539A25"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785bb9-201f-0054-5f09-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      If-Modified-Since: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5e2263d8-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      x-ms-version: ['2018-11-09']
+    method: DELETE
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?recursive=True
+  response:
+    body: {string: '{"error":{"code":"ConditionNotMet","message":"The condition specified
+        using HTTP conditional header(s) is not met.\nRequestId:ca785bba-201f-0054-6009-1d25a1000000\nTime:2019-06-07T08:15:10.4226467Z"}}'}
+    headers:
+      Content-Length: ['200']
+      Content-Type: [application/json;charset=utf-8]
+      Date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-error-code: [ConditionNotMet]
+      x-ms-request-id: [ca785bba-201f-0054-6009-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 412, message: The condition specified using HTTP conditional header(s)
+        is not met.}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      If-Modified-Since: ['Fri, 07 Jun 2019 08:14:10 GMT']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5e294680-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      x-ms-version: ['2018-11-09']
+    method: DELETE
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?recursive=True
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785bbb-201f-0054-6109-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5e324bae-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      x-ms-version: ['2018-11-09']
+    method: PUT
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?resource=directory
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      ETag: ['"0x8D6EB20426A5BFE"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785bbc-201f-0054-6209-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      If-Unmodified-Since: ['Fri, 07 Jun 2019 08:14:10 GMT']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5e394288-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      x-ms-version: ['2018-11-09']
+    method: DELETE
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?recursive=True
+  response:
+    body: {string: '{"error":{"code":"ConditionNotMet","message":"The condition specified
+        using HTTP conditional header(s) is not met.\nRequestId:ca785bbd-201f-0054-6309-1d25a1000000\nTime:2019-06-07T08:15:10.5737914Z"}}'}
+    headers:
+      Content-Length: ['200']
+      Content-Type: [application/json;charset=utf-8]
+      Date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-error-code: [ConditionNotMet]
+      x-ms-request-id: [ca785bbd-201f-0054-6309-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 412, message: The condition specified using HTTP conditional header(s)
+        is not met.}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      If-Unmodified-Since: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5e404718-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      x-ms-version: ['2018-11-09']
+    method: DELETE
+    uri: https://storagename.dfs.core.windows.net/utcontainerded41c51/directorytestded41c51?recursive=True
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [ca785bbe-201f-0054-6409-1d25a1000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 200, message: OK}
+version: 1

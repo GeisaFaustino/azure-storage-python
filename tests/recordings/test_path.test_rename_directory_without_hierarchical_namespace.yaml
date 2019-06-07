@@ -1,0 +1,48 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [60a2c83c-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:14 GMT']
+      x-ms-version: ['2018-11-09']
+    method: PUT
+    uri: https://storagename.dfs.core.windows.net/utcontainer250d1983/directorytest250d1983?resource=directory
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:04 GMT']
+      ETag: ['"0x8D6EB2044EE96D3"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:14 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [837b7f11-501f-0014-6e09-1d0c4f000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [60bd33c0-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:14 GMT']
+      x-ms-rename-source: [/utcontainer250d1983/directorytest250d1983]
+      x-ms-version: ['2018-11-09']
+    method: PUT
+    uri: https://storagename.dfs.core.windows.net/utcontainer250d1983/directorytestnew250d1983
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:04 GMT']
+      ETag: ['"0x8D6EB2044F6AF18"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:14 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-continuation: ['']
+      x-ms-request-id: [837b7f12-501f-0014-6f09-1d0c4f000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 201, message: Created}
+version: 1

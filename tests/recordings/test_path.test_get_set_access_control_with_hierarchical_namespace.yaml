@@ -1,0 +1,148 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5e9559a6-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:11 GMT']
+      x-ms-version: ['2018-11-09']
+    method: PUT
+    uri: https://hierarchicalnamespacestoragename.dfs.core.windows.net/utcontainer6f6f1a9b/directorytest6f6f1a9b?resource=directory
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      ETag: ['"0x8D6EB2042E11FB9"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:11 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-request-id: [e3759a78-301f-0088-1109-1d55db000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 201, message: Created}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5eb3cf80-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:11 GMT']
+      x-ms-version: ['2018-11-09']
+    method: HEAD
+    uri: https://hierarchicalnamespacestoragename.dfs.core.windows.net/utcontainer6f6f1a9b/directorytest6f6f1a9b?action=getAccessControl&upn=True
+  response:
+    body: {string: ''}
+    headers:
+      Date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      ETag: ['"0x8D6EB2042E11FB9"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:11 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-acl: ['user::rwx,group::r-x,other::---']
+      x-ms-group: [$superuser]
+      x-ms-owner: [$superuser]
+      x-ms-permissions: [rwxr-x---]
+      x-ms-request-id: [e3759a79-301f-0088-1209-1d55db000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-acl: ['user::rwx,group::r--,other::r--']
+      x-ms-client-request-id: [5eba1ce6-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:11 GMT']
+      x-ms-group: [68390a19-a643-458b-b726-408abf67b4fc]
+      x-ms-owner: [68390a19-a643-458b-b726-408abf67b4fc]
+      x-ms-version: ['2018-11-09']
+    method: PATCH
+    uri: https://hierarchicalnamespacestoragename.dfs.core.windows.net/utcontainer6f6f1a9b/directorytest6f6f1a9b?action=setAccessControl
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:10 GMT']
+      ETag: ['"0x8D6EB2042F2FCEE"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:11 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-namespace-enabled: ['true']
+      x-ms-request-id: [e3759a7a-301f-0088-1309-1d55db000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5ec1881e-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:11 GMT']
+      x-ms-version: ['2018-11-09']
+    method: HEAD
+    uri: https://hierarchicalnamespacestoragename.dfs.core.windows.net/utcontainer6f6f1a9b/directorytest6f6f1a9b?action=getAccessControl&upn=True
+  response:
+    body: {string: ''}
+    headers:
+      Date: ['Fri, 07 Jun 2019 08:15:11 GMT']
+      ETag: ['"0x8D6EB2042F2FCEE"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:11 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-acl: ['user::rwx,group::r--,other::r--']
+      x-ms-group: [68390a19-a897-236b-b453-488abf67b4fc]
+      x-ms-owner: [68390a19-a897-236b-b453-488abf67b4fc]
+      x-ms-permissions: [rwxr--r--]
+      x-ms-request-id: [e3759a7b-301f-0088-1409-1d55db000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      Content-Length: ['0']
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5f3e7a04-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:12 GMT']
+      x-ms-group: [68390a19-a643-458b-b726-408abf67b4fc]
+      x-ms-owner: [68390a19-a643-458b-b726-408abf67b4fc]
+      x-ms-permissions: [rwxrw-rw-]
+      x-ms-version: ['2018-11-09']
+    method: PATCH
+    uri: https://hierarchicalnamespacestoragename.dfs.core.windows.net/utcontainer6f6f1a9b/directorytest6f6f1a9b?action=setAccessControl
+  response:
+    body: {string: ''}
+    headers:
+      Content-Length: ['0']
+      Date: ['Fri, 07 Jun 2019 08:15:11 GMT']
+      ETag: ['"0x8D6EB204376F9D9"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:12 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-namespace-enabled: ['true']
+      x-ms-request-id: [e3759a7c-301f-0088-1509-1d55db000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [keep-alive]
+      User-Agent: [Azure-Storage/2.0.0-2.0.1 (Python CPython 3.7.0; Darwin 18.6.0)]
+      x-ms-client-request-id: [5f4577dc-88fc-11e9-b296-acde48001122]
+      x-ms-date: ['Fri, 07 Jun 2019 08:15:12 GMT']
+      x-ms-version: ['2018-11-09']
+    method: HEAD
+    uri: https://hierarchicalnamespacestoragename.dfs.core.windows.net/utcontainer6f6f1a9b/directorytest6f6f1a9b?action=getAccessControl&upn=False
+  response:
+    body: {string: ''}
+    headers:
+      Date: ['Fri, 07 Jun 2019 08:15:11 GMT']
+      ETag: ['"0x8D6EB204376F9D9"']
+      Last-Modified: ['Fri, 07 Jun 2019 08:15:12 GMT']
+      Server: [Windows-Azure-HDFS/1.0 Microsoft-HTTPAPI/2.0]
+      x-ms-acl: ['user::rwx,group::rw-,other::rw-']
+      x-ms-group: [68390a19-a897-236b-b453-488abf67b4fc]
+      x-ms-owner: [68390a19-a897-236b-b453-488abf67b4fc]
+      x-ms-permissions: [rwxrw-rw-]
+      x-ms-request-id: [e3759a7d-301f-0088-1609-1d55db000000]
+      x-ms-version: ['2018-11-09']
+    status: {code: 200, message: OK}
+version: 1

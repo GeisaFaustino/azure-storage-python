@@ -4,7 +4,7 @@
 
 ## Version XX.XX.XX
 
-- Added support for directory operations: create, rename, and delete.
+- Added support for path operations: create and delete directory, rename path, get and set path access control.
 
 ## Version 2.0.1:
 

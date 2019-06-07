@@ -29,9 +29,9 @@ from tests.testcase import (
 )
 
 
-class StorageDirectoryTest(StorageTestCase):
+class StoragePathTest(StorageTestCase):
     def setUp(self):
-        super(StorageDirectoryTest, self).setUp()
+        super(StoragePathTest, self).setUp()
         self.bs = self._create_storage_service(BlockBlobService, self.settings)
         self.bs_namespace = self._create_storage_service_with_hierarchical_namespace(BlockBlobService, self.settings)
 
@@ -48,7 +48,7 @@ class StorageDirectoryTest(StorageTestCase):
         if not self.is_playback():
             self.bs.delete_container(self.container_name)
             self.bs_namespace._delete_file_system(self.container_name)
-        return super(StorageDirectoryTest, self).tearDown()
+        return super(StoragePathTest, self).tearDown()
 
     def _get_directory_reference(self, suffix=""):
         return self.get_resource_name("directorytest" + suffix)
@@ -159,6 +159,14 @@ class StorageDirectoryTest(StorageTestCase):
             self.assertIsNotNone(props)
             self.assertIsNotNone(props.etag)
             self.assertIsNotNone(props.last_modified)
+
+            # Verify if permissions are set
+            props = blob_service.get_path_access_control(self.container_name, directory_name)
+            self.assertIsNotNone(props)
+            self.assertIsNotNone(props.owner)
+            self.assertIsNotNone(props.permissions)
+            self.assertIsNotNone(props.group)
+            self.assertIsNotNone(props.acl)
 
             # Cleanup
             blob_service.delete_directory(self.container_name, directory_name)
@@ -299,7 +307,7 @@ class StorageDirectoryTest(StorageTestCase):
         new_directory_name = self._get_directory_reference("new")
 
         # Act
-        marker = blob_service.rename_directory(self.container_name, new_directory_name, directory_name)
+        marker = blob_service.rename_path(self.container_name, new_directory_name, directory_name)
 
         # Assert
         self.assertIsNone(marker)
@@ -318,7 +326,7 @@ class StorageDirectoryTest(StorageTestCase):
         self._create_sub_dirs(blob_service, directory_name, num_of_sub_dir=1000)
 
         # Act
-        marker = blob_service.rename_directory(self.container_name, new_directory_name, directory_name)
+        marker = blob_service.rename_path(self.container_name, new_directory_name, directory_name)
 
         # Assert
         self.assertIsNotNone(marker)
@@ -327,8 +335,8 @@ class StorageDirectoryTest(StorageTestCase):
         # Continue the rename
         count = 0
         while marker is not None:
-            new_marker = blob_service.rename_directory(self.container_name, new_directory_name, directory_name,
-                                                       marker=marker)
+            new_marker = blob_service.rename_path(self.container_name, new_directory_name, directory_name,
+                                                  marker=marker)
             self.assertNotEqual(marker, new_marker)
             marker = new_marker
             count += 1
@@ -343,12 +351,12 @@ class StorageDirectoryTest(StorageTestCase):
 
         # if_match fails
         with self.assertRaises(AzureHttpError):
-            blob_service.rename_directory(self.container_name, new_directory_name, directory_name,
-                                          source_if_match='0x111111111111111')
+            blob_service.rename_path(self.container_name, new_directory_name, directory_name,
+                                     source_if_match='0x111111111111111')
 
         # if_match succeeds
-        marker = blob_service.rename_directory(self.container_name, new_directory_name, directory_name,
-                                               source_if_match=props.etag)
+        marker = blob_service.rename_path(self.container_name, new_directory_name, directory_name,
+                                          source_if_match=props.etag)
         self.assertIsNone(marker)
 
         # Arrange
@@ -356,12 +364,12 @@ class StorageDirectoryTest(StorageTestCase):
 
         # if_none_match fails
         with self.assertRaises(AzureHttpError):
-            blob_service.rename_directory(self.container_name, new_directory_name, directory_name,
-                                          source_if_none_match=props.etag)
+            blob_service.rename_path(self.container_name, new_directory_name, directory_name,
+                                     source_if_none_match=props.etag)
 
         # if_none_match succeeds
-        marker = blob_service.rename_directory(self.container_name, new_directory_name, directory_name,
-                                               source_if_none_match='0x111111111111111')
+        marker = blob_service.rename_path(self.container_name, new_directory_name, directory_name,
+                                          source_if_none_match='0x111111111111111')
         self.assertIsNone(marker)
 
         # Arrange
@@ -369,12 +377,12 @@ class StorageDirectoryTest(StorageTestCase):
 
         # if_modified_since fails
         with self.assertRaises(AzureHttpError):
-            blob_service.rename_directory(self.container_name, new_directory_name, directory_name,
-                                          source_if_modified_since=props.last_modified)
+            blob_service.rename_path(self.container_name, new_directory_name, directory_name,
+                                     source_if_modified_since=props.last_modified)
 
         # if_modified_since succeeds
-        marker = blob_service.rename_directory(self.container_name, new_directory_name, directory_name,
-                                               source_if_modified_since=props.last_modified - datetime.timedelta(
+        marker = blob_service.rename_path(self.container_name, new_directory_name, directory_name,
+                                          source_if_modified_since=props.last_modified - datetime.timedelta(
                                                    minutes=1))
         self.assertIsNone(marker)
 
@@ -383,11 +391,62 @@ class StorageDirectoryTest(StorageTestCase):
 
         # if_unmodified_since fails
         with self.assertRaises(AzureHttpError):
-            blob_service.rename_directory(self.container_name, new_directory_name, directory_name,
-                                          source_if_unmodified_since=props.last_modified - datetime.timedelta(
+            blob_service.rename_path(self.container_name, new_directory_name, directory_name,
+                                     source_if_unmodified_since=props.last_modified - datetime.timedelta(
                                               minutes=1))
 
         # if_unmodified_since succeeds
-        marker = blob_service.rename_directory(self.container_name, new_directory_name, directory_name,
-                                               source_if_unmodified_since=props.last_modified)
+        marker = blob_service.rename_path(self.container_name, new_directory_name, directory_name,
+                                          source_if_unmodified_since=props.last_modified)
         self.assertIsNone(marker)
+
+    @record
+    def test_get_set_access_control_with_hierarchical_namespace(self):
+        # Arrange
+        directory_name = self._get_directory_reference()
+        props = self.bs_namespace.create_directory(self.container_name, directory_name,)
+        self.assertIsNotNone(props.etag)
+        self.assertIsNotNone(props.last_modified)
+
+        # Act: get acl
+        props = self.bs_namespace.get_path_access_control(
+            self.container_name, directory_name, user_principle_names=True)
+        # validate the default values are being returned
+        self.assertIsNotNone(props)
+        self.assertIsNotNone(props.owner)
+        self.assertIsNotNone(props.permissions)
+        self.assertIsNotNone(props.group)
+        self.assertIsNotNone(props.acl)
+
+        # Act: set acl
+        test_owner = self.settings.ACTIVE_DIRECTORY_APPLICATION_ID
+        test_group = self.settings.ACTIVE_DIRECTORY_APPLICATION_ID
+        test_acl = 'user::rwx,group::r--,other::r--'
+        props = self.bs_namespace.set_path_access_control(self.container_name, directory_name,
+                                                          owner=test_owner, group=test_group, acl=test_acl)
+        self.assertIsNotNone(props.etag)
+        self.assertIsNotNone(props.last_modified)
+
+        # Assert
+        props = self.bs_namespace.get_path_access_control(self.container_name, directory_name, user_principle_names=True)
+        self.assertIsNotNone(props)
+        self.assertEqual(props.owner, test_owner)
+        self.assertEqual(props.group, test_group)
+        self.assertEqual(props.acl, test_acl)
+
+        # Act: set permissions
+        test_owner = self.settings.ACTIVE_DIRECTORY_APPLICATION_ID
+        test_group = self.settings.ACTIVE_DIRECTORY_APPLICATION_ID
+        test_permissions = 'rwxrw-rw-'
+        props = self.bs_namespace.set_path_access_control(self.container_name, directory_name,
+                                                          owner=test_owner, group=test_group,
+                                                          permissions=test_permissions)
+        self.assertIsNotNone(props.etag)
+        self.assertIsNotNone(props.last_modified)
+
+        # Assert
+        props = self.bs_namespace.get_path_access_control(self.container_name, directory_name)
+        self.assertIsNotNone(props)
+        self.assertEqual(props.owner, test_owner)
+        self.assertEqual(props.group, test_group)
+        self.assertEqual(props.permissions, test_permissions)
